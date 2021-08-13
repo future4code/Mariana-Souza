@@ -101,12 +101,15 @@ function retornaUltimoElemento(array) {
 
 // EXERCÍCIO 11
 function trocaPrimeiroEUltimo(array) {
-  // implemente sua lógica aqui
-  // const i = array.length
-  // array.pop()
-  // array.push(array[0])
-  // const novoArray = [array[i-1], array[0]]
-  // return novoArray
+  //implemente sua lógica aqui
+  const i = array.length
+  const ultimoElemento =  array[i-1]//salva último elemento
+  
+  array.pop()//apaga último elemento
+  array.push(array[0])//adiciona primeiro elemento na última posição
+  array[0] = ultimoElemento
+
+  return array
 }
 
 // EXERCÍCIO 12
