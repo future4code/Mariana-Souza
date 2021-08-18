@@ -127,25 +127,25 @@
 
 //EXERCÍCIO 2
 
-function getRandom(max) {
-    return Math.floor(Math.random() * max + 1)
-}
+// function getRandom(max) {
+//     return Math.floor(Math.random() * max + 1)
+// }
 
-const numeroPrimeiroJogador = getRandom(100);
-console.log("Vamos jogar!");
-let numeroSegundoJogador = Number(prompt("Dê um palpite:"));
-let contador = 1;
-while(numeroSegundoJogador !== numeroPrimeiroJogador){
-    console.log("O número chutado foi: ", numeroSegundoJogador);
-    if(numeroSegundoJogador > numeroPrimeiroJogador){
-        console.log("Errou! O número escolhido é menor.");
-    }
-    if(numeroSegundoJogador < numeroPrimeiroJogador){
-        console.log("Errou! O número escolhido é maior.");
-    }
-    numeroSegundoJogador = Number(prompt("Dê outro palpite:"));
-    contador++; 
-}
-console.log("O número chutado foi: ", numeroSegundoJogador);
-console.log("Acertou!!!");
-console.log("O número de tentativas foi:", contador);
+// const numeroPrimeiroJogador = getRandom(100);
+// console.log("Vamos jogar!");
+// let numeroSegundoJogador = Number(prompt("Dê um palpite:"));
+// let contador = 1;
+// while(numeroSegundoJogador !== numeroPrimeiroJogador){
+//     console.log("O número chutado foi: ", numeroSegundoJogador);
+//     if(numeroSegundoJogador > numeroPrimeiroJogador){
+//         console.log("Errou! O número escolhido é menor.");
+//     }
+//     if(numeroSegundoJogador < numeroPrimeiroJogador){
+//         console.log("Errou! O número escolhido é maior.");
+//     }
+//     numeroSegundoJogador = Number(prompt("Dê outro palpite:"));
+//     contador++; 
+// }
+// console.log("O número chutado foi: ", numeroSegundoJogador);
+// console.log("Acertou!!!");
+// console.log("O número de tentativas foi:", contador);
