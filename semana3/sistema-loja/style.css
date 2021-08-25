@@ -1,0 +1,127 @@
+body{
+    background-color: #f5f3f5;
+}
+/* Cabeçalho */
+header{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1f3b2c;
+    margin-top: 0;
+    padding: 8vh 0vh 8vh 0vh;
+    width: 100%;
+}
+
+#titulo{
+    display: inline;
+    margin-left: 60px;
+    color: #f5f3f5;
+   
+}
+#menu{
+    color: #f5f3f5;
+    display: inline;
+    margin-left: 20%;
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+a{
+    color: #f5f3f5;
+    text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	font-weight: bold;
+}
+/* Página inicial */
+.conteudo{
+    width: 60vw;
+    margin: 0vw 20vw 10vw 20vw;
+}
+.texto-apresentacao{
+    font-size: 20pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#imagem-processo{
+    width: 400px;
+    
+}
+/* #quadrado{
+    width: 300px;
+    height: 300px;
+    color:#f5e1e1;
+    background-color: #f5e1e1;
+    border: solid 10px #f5e1e1;
+    margin-left: 450px;
+    position: absolute;
+} */
+
+/* Formulario Cadastro*/
+#formulario{
+    padding: 20px;
+}
+label{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: block;
+}
+input{
+    font-size: 15pt;
+}
+input:focus {
+    background: #f5e1e1;
+}
+button {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+    font-size: 1.5em;
+    background: #588068;
+    border: 0;
+    margin-top: 5px;
+    color:#f5f3f5;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px #000;
+    cursor: pointer;
+}
+button:hover{
+    font-weight: bold;
+}
+/* Tabela */
+table{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 80%;
+    border-collapse: collapse;
+}
+.imagens-produtos{
+    width: 100px;
+}
+.cor-diferente{
+    background-color: #f5e1e1;
+}
+/* Formulario Venda */
+#formulario-venda{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 20px;
+}
+
+/* Rodapé */
+footer{
+    height: 10%;
+    background-color: #1f3b2c;
+    color: #f5f3f5;
+    text-align: center;
+    margin-top: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.icones-redes{
+    display: inline;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+
+
+
+

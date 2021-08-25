@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Adicionar Produto</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1 id="titulo">Vendas</h1>
+            <div id="menu">
+                <a href="index.html">Página Inicial</a> |
+                <a href="ctrl-estoque.html">Controle de Estoque</a> |
+                <a href="add-produto.html">Adicionar Produto</a> |
+                <a href="funcionarios.html">Funcionários</a> |
+                <a href="venda.html">Venda</a>
+            </div>
+           
+        </div>
+        
+    </header>
+      
+    <section class="conteudo">
+        <form action="#" id="formulario-venda">
+            <div>
+                <label for="produto" >Produto: </label>
+                <input type="text" id="produto" name="produto">
+            </div>
+            
+            <div>
+                <label for="preco">Preço (em R$): </label>
+                <input type="number" id="preco" name="preço">
+            </div>
+            <div>
+                <label for="forma-de-pagamento">Forma de pagamento:</label>
+                <input type="radio" name="forma-de-pagamento" value="dinheiro" id="forma-de-pagamento" checked> Dinheiro
+                <input type="radio" name="forma-de-pagamento" value="cartao" id="forma-de-pagamento"> Cartão
+            </div>
+            <div class="form-add">
+                <button type="submit">Finalizar</button>
+            </div>
+
+        </form>
+        
+    </section>  
+    <footer>
+        <p class="redes" id="redes">Siga-nos nas redes sociais!</p>
+
+            <div >
+                <img class="icones-redes" src="https://image.flaticon.com/icons/png/512/25/25305.png"/>
+                <a href=https://www.instagram.com/carolsouza_atelie/ target="_blank">
+                    <img class="icones-redes" src="https://image.flaticon.com/icons/png/512/25/25425.png"/>
+                </a>
+                <img class="icones-redes" src="https://image.flaticon.com/icons/png/512/8/8800.png"/>
+            </div>
+    </footer>
+</body>
+</html>

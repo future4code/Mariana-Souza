@@ -4,39 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Ateliê Carol Souza</title>
 </head>
 <body>
-    <div>
-        <h1>Bem-vind@ ao <em>Ateliê Carol Souza</em>!</h1>
-        <p>Peças feitas à mão para você ou sua casa</p>
-    </div>
-
-    <div>
-        <a href="index.html">Página Inicial</a>
-        <a href="ctrl-estoque.html">Controle de Estoque</a>
-        <a href="add-produto.html">Adicionar Produto</a>
-        <a href="funcionarios.html">Funcionários</a>
-    </div>
-
-    <div>
+    <header>
+        <div>
+            <h1 id="titulo">Ateliê Carol Souza</h1>
+            <div id="menu">
+                <a href="index.html">Página Inicial</a> |
+                <a href="ctrl-estoque.html">Controle de Estoque</a> |
+                <a href="add-produto.html">Adicionar Produto</a> |
+                <a href="funcionarios.html">Funcionários</a> |
+                <a href="venda.html">Venda</a>
+            </div>
+           
+        </div>
         
-        <p>
-            Somos um ateliê de peças 100% handmade, que busca valorizar as mais diversas técnicas manuais e matérias primas que respeitem o meio-ambiente. Algodão, fios artesanais e fibras naturais são nossas principais matérias primas.
-        </p>
-        <p>
-            Nossas peças são tecidas respeitando o processo manual, que leva tempo e exige muita dedicação, por isso, muitas vezes, trazemos peças únicas, que não terão reposição. Além disso, gostamos de preservar a exclusividade do feito à mão, garantindo a cada cliente uma peça única.
-        </p>
-    </div>
+    </header>
+    <section class="conteudo">
+        <div>
+            
+            <p class="texto-apresentacao">
+                Somos um ateliê de peças 100% handmade, que busca valorizar as mais diversas técnicas manuais e matérias primas que respeitem o meio-ambiente. Algodão, fios artesanais e fibras naturais são nossas principais matérias primas.
+            </p>
+            
+            <img id="imagem-processo" src="img/processo.jpg" alt="mesa com materiais de tricô">  
+            
+            <!-- <div id="quadrado"></div> -->
+            <p class="texto-apresentacao">
+                Nossas peças são tecidas respeitando o processo manual, que leva tempo e exige muita dedicação, por isso, muitas vezes, trazemos peças únicas, que não terão reposição. Além disso, optamos por preservar a exclusividade do feito à mão, garantindo a cada cliente uma peça única.
+            </p>
+        </div>
 
-    <div>
+    </section>
+    <footer>
         <p>Siga-nos nas redes sociais!</p>
 
-        <div>
-            <img src="https://image.flaticon.com/icons/png/512/25/25305.png"/>
-            <img src="https://image.flaticon.com/icons/png/512/25/25425.png"/>
-            <img src="https://image.flaticon.com/icons/png/512/8/8800.png"/>
+        <div >
+            <img class="icones-redes" src="https://image.flaticon.com/icons/png/512/25/25305.png"/>
+            <a href=https://www.instagram.com/carolsouza_atelie/ target="_blank">
+                <img class="icones-redes" src="https://image.flaticon.com/icons/png/512/25/25425.png"/>
+            </a>
+            <img class="icones-redes" src="https://image.flaticon.com/icons/png/512/8/8800.png"/>
         </div>
-    </div>
+    </footer>
 </body>
 </html>
