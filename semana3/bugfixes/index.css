@@ -113,9 +113,14 @@ div:last-child {
     text-align: center;
 }
 
+#titulo-pagina-comprar{
+    font-family: Roboto;
+}
+
 table {
     width: 60%;
     font-family: Roboto;
+    margin: 0px auto; 
 }
 
 td{
@@ -162,6 +167,10 @@ td>img{
     border-radius: 5px;
     font-size: 10px;
     color: black;
+}
+
+#botao-voltar{
+    text-align: center;
 }
 
 #back-button:hover {
