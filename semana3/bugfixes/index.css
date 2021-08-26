@@ -21,9 +21,9 @@ input {
     width: 500px;
 }
 
-button:focus {
+/* button:focus {
     color: white;
-}
+} */
 
 img {
     width: 100px;
@@ -136,6 +136,13 @@ td>img{
     height: 100px;
 }
 
+.botao-comprar:active{
+    color: white;
+}
+
+.botao-comprar:hover{
+    background-color: #d1ad09;
+}
 
 
 #back-button {
