@@ -57,9 +57,17 @@ div>p:first-child {
     text-align: center;
 }
 
-.icone {
+#icone {
     height: 15px;
     width: 15px;
+
+}
+
+#icone:hover{
+    opacity: 0.5;
+}
+#icone:active{
+    opacity: 1;
 }
 
 
@@ -85,7 +93,7 @@ div>p:first-child {
 
 #container-de-descricao>ol {
     padding: 15px 0px;
-    
+    list-style-type: decimal;
 }
 
 #container-para-comprar {
