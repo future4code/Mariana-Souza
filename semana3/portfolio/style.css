@@ -9,6 +9,7 @@ header{
     height: 100vh;
     position: relative;
     background-color: rgba(0, 0, 0, .5);
+    overflow: hidden;
 }
 .imagem{
     width: 100%;
@@ -58,6 +59,7 @@ header{
 .menu a:hover{
     font-weight:bold;
     font-size: 1.1rem;
+    /* cursor: pointer; */
 }
 
 #sobre-mim{
@@ -66,6 +68,7 @@ header{
     height: 100vh;
     position: relative;
     font-family: "Montserrat";
+    overflow: hidden;
 }
 
 #sobre-mim h2{
@@ -93,6 +96,7 @@ header{
     height: 100vh;
     position: relative;
     font-family: "Montserrat";
+    overflow: hidden;
 }
 
 #instituicoes h2{
@@ -146,7 +150,9 @@ header{
     height: 100vh;
     position: relative;
     font-family: "Montserrat";
+    overflow: hidden;
 }
+
 
 #projetos h2{
     position: absolute;
@@ -159,45 +165,76 @@ header{
 
 #projeto-guia{
     display: inline;
-    background-color: #d39820;
+    /* background-color: #d39820; */
     width: 15vw;
     height: 60%;
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 18%;
 }
 #projeto-aula12{
     display: inline;
-    background-color: #d39820;
+    /* background-color: #d39820; */
     width: 15vw;
     height: 60%;
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 43%;
+    
+}
+#projeto-aula12 img{
+    width: 15vw;
+    height: 20vh;
 }
 #projeto-aula13{
     display: inline;
-    background-color: #d39820;
+    /* background-color: #d39820; */
     width: 15vw;
     height: 60%;
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 68%;
 }
+#projetos button{
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    font-size: 1.2rem;
+    width: 8vw;
+    height: 5vh;
+    border-radius: 6px;
+    background-color: #d39820;
+    color: #0f0f33;
+}
+#projetos button:hover{
+    cursor: pointer;
+    background-color: rgba(211, 152, 32, .8);
+}
 
+#projetos p{
+    color: #b5b5b7;
+    font-weight: bold;
+    display: inline;
+    width: 50vw;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    text-align: justify;
+}
 #contato{
     /* background-color: #b5b5b7; */
     width: 100%;
     height: 100vh;
     position: relative;
     font-family: "Montserrat";
+    overflow: hidden;
 }
 #contato h2{
     position: absolute;
     left: 15%;
     top: 10%;
     padding-left: 25vw;
-    color: #97969c;
+    color: #0f0f33;
     font-size: 3rem;
 }
 #contato img{
@@ -206,9 +243,43 @@ header{
 #contato form{
     
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 40%;
 }
 label{
     display: block;
+}
+input{
+    font-size: 1.5rem;
+    height: 6vh;
+}
+textarea{
+    font-size: 1.4rem;
+    height: 20vh;
+}
+
+input:focus, textarea:focus{
+    background-color: #f7f3eb;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    border-bottom: solid 1px black;
+    outline: 0;
+}
+textarea{
+    display: block;
+    border-radius: 5px;
+}
+#contato button{
+    margin-top: 5%;
+    width: 8vw;
+    font-size: 1.4rem;
+    border-radius: 6px;
+    background-color: rgba(15, 15, 51, 1);
+    color: #b5b5b7;
+    font-family: "Montserrat";
+    font-weight: bold;
+}
+#contato button:hover{
+    background-color: rgba(15, 15, 51, .9);
+    cursor: pointer;
 }
