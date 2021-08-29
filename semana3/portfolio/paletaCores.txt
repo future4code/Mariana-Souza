@@ -1,0 +1,10 @@
+CORES:
+Mostarda  #d39820
+Azul Marinho #0f0f33
+Cinza médio #97969c
+Cinza claro #b5b5b7
+Azul cinza #4d5a6b
+Preto #07060c
+
+LINK DA IMAGEM DE REFERÊNCIA
+https://i.pinimg.com/564x/75/d3/f4/75d3f42e30ed9ae2b1e5c6182cc238a5.jpg
