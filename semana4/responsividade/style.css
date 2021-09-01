@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    height: 60px;
+    width: 100%;
+    background-color: rgb(211, 153, 153);
+}
+input{
+    border: none;
+    border-bottom: 2px solid darkgrey;
+    width: 80%;
+    font-size: 1.2rem;
+}
+input:focus{
+    border: none;
+    border-bottom: 2px solid darkgrey;
+    outline: 0;
+}
+.logo h2{
+    display: inline;
+}
+.icone{
+    width: 20px;
+    height: 20px;
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:visited{
+    color: black;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px 40px;
+    padding: 30px;
+    justify-items: center;
+}
+main div{
+    
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.espaco-vazio{
+    height: 60px;
+}
+
+img{
+    width: 100%;
+}
+button{
+    background-color: #9ad9db;
+    border: none;
+    border-radius: 3px;
+    height: 1.8em;
+    padding: 5px;
+    margin: 5px;
+    width: 40%;
+    
+}
+button:hover{
+    background-color: #4cb1b5;
+}
+
+.video-container{
+    
+    width: 100%;
+    display: flex;
+
+    justify-content: center;
+    grid-column: 2/4;
+}
+video{
+    width: 100%;
+}
+.infos-do-video{
+    grid-column: 2/4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+h2{
+    padding: 10px
+}
+.infos-do-video button{
+    margin-top: 20px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 10px;
+    height: 60px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: rgb(211, 153, 153);
+}
+
+@media screen and (max-device-width: 500px) {
+    main{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+   
+    }
+    footer{
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+    }
+    .icone{
+        display: none;
+    }
+    
+}
