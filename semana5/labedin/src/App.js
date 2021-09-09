@@ -4,6 +4,8 @@ import CardGrande from './components/CardGrande/CardGrande';
 import ImagemButton from './components/ImagemButton/ImagemButton';
 import CardPequeno from './components/CardPequeno/CardPequeno';
 
+
+
 function App() {
   return (
     <div className="App">
@@ -23,10 +25,14 @@ function App() {
 
       <div className="page-section-container">
         <CardPequeno 
-          imagemEmail="https://icons-for-free.com/iconfiles/png/512/email+48px-131985190190164101.png"
-          email="  carol@contato.com"
-          imagemEndereco="https://icons-for-free.com/iconfiles/png/512/pin+drop+48px-131987943443821724.png"
-          endereco=" Rua A, s/n, Santa Clara, Piacatuba - MG"
+          imagem="https://icons-for-free.com/iconfiles/png/512/email+48px-131985190190164101.png"
+          titulo="E-mail:"
+          dado="  carol@contato.com"
+        />
+        <CardPequeno
+        imagem="https://icons-for-free.com/iconfiles/png/512/pin+drop+48px-131987943443821724.png"
+        titulo="Endereço:"
+        dado="Rua A, s/n, Santa Clara, Piacatuba - MG"
         />
       </div>
 

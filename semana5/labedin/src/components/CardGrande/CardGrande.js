@@ -10,6 +10,8 @@ function CardGrande(props) {
                 <p>{ props.descricao }</p>
             </div>
         </div>
+        
+        
     )
 }
 
