@@ -2,6 +2,7 @@ import React from 'react';
 import '../App.css';
 import Cadastro from './cadastroUsuario'
 import ListaUsuario from './listaUsuarios'
+import styled from 'styled-components'
 
 
 function Home(props){

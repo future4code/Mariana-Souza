@@ -3,8 +3,14 @@ import Cadastro from './components/cadastroUsuario'
 import Home from './components/home'
 import ListaUsuario from './components/listaUsuarios';
 import './App.css';
+import styled from 'styled-components';
 
-
+const PageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+`
 
 
 class App extends React.Component {
@@ -14,11 +20,9 @@ class App extends React.Component {
   }
   
   onClickCadastro = () => {
-    console.log("cadastro")
     this.setState({pagina: "cadastro"});
   }
   onClickLista = () => {
-    console.log("lista");
     this.setState({pagina: "lista"});
   }
 
@@ -32,34 +36,34 @@ class App extends React.Component {
     
         // {if(this.state.pagina === ""){
         //   return (
-        //     <div className="pageContainer">
+        //     <PageContainer>
         //       <Home 
         //       onClickCadastro={this.onClickCadastro}
         //       onClickLista={this.onClickLista}
         //       />
-        //     </div>
+        //     </PageContainer>
         //   );
         {if(this.state.pagina === "cadastro"){
           return (
-            <div className="pageContainer">
+            <PageContainer>
               <Cadastro 
                 onClickCadastro={this.onClickCadastro}
                 onClickLista={this.onClickLista} 
                 // onClickVoltar={this.onClickVoltar}
               
               />
-            </div>
+            </PageContainer>
           );
         }
         else if(this.state.pagina === "lista"){
           return (
-            <div className="pageContainer">
+            <PageContainer>
               <ListaUsuario
                 onClickCadastro={this.onClickCadastro}
                 onClickLista={this.onClickLista} 
                 // onClickVoltar={this.onClickVoltar}
               />
-            </div>
+            </PageContainer>
           );
         }
         }
