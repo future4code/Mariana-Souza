@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import Footer from './components/footer/footer';
 import Header from './components/header/header';
 import Barra from './components/barra-lateral/barra-lateral';
-import Main from './components/main/main';
+import Main from './components/pages/home';
 
 
 const PageContainer = styled.div`
@@ -13,12 +13,24 @@ const PageContainer = styled.div`
 `
 
 class App extends React.Component{
+  state={
+    paginaAtual: "home"
+  }
+  
+  mostraPagina = (pagina) =>{
+    this.setState({paginaAtual: pagina});
+  }
+  
   render(){
     return (
       <PageContainer>
         <Header />
-        <Barra />
-        <Main />
+        <Barra 
+          mostraPagina={this.mostraPagina}
+        />
+        <Main 
+          paginaAtual={this.state.paginaAtual}
+        />
         <Footer/>
       </PageContainer>
     );

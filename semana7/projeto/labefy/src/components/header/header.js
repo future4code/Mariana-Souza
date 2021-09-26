@@ -1,7 +1,8 @@
 import React from "react";
+
 import styled from "styled-components";
 
-const HeaderContainer = styled.footer`
+const HeaderContainer = styled.header`
     background-color: #1f4e45;
     height: 6vh;
     width: 100vw;
