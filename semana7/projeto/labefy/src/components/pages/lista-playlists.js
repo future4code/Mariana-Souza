@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Playlist from "./detalhe-playlist";
+import NovaMusica from "./nova-musica";
 
 const PageContainer = styled.div`
     height: 60%;
@@ -90,6 +91,7 @@ class Lista extends React.Component{
             if (this.state.pagina === "lista"){
                 return (
                     <ListaContainer>
+                        <Titulo>Minhas playlists</Titulo>
                             {this.state.lista.map((playlist) => {
                                 return (
                                     <Item>
@@ -107,6 +109,10 @@ class Lista extends React.Component{
                 return <Playlist 
                             atualizaPagina={this.atualizaPagina}
                         />
+            }else if(this.state.pagina==="adicionarmusica"){
+                return <NovaMusica 
+                            atualizaPagina={this.atualizaPagina}
+                        />
             }
         }
 
@@ -114,7 +120,7 @@ class Lista extends React.Component{
         return(
         
             <PageContainer>
-                <Titulo>Minhas playlists</Titulo>
+                
                     {mostraPagina()}
             </PageContainer>
     

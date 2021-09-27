@@ -29,6 +29,7 @@ class Playlist extends React.Component{
             <PlaylistContainer>
                 <p>Detalhe</p>
                 <button onClick={()=>this.props.atualizaPagina("lista")}>Voltar</button>
+                <button onClick={()=>this.props.atualizaPagina("adicionarmusica")}>Adicionar nova música</button>
             </PlaylistContainer>
     
         );

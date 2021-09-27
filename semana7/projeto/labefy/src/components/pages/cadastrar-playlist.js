@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import axios from "axios";
+import { axiosConfig, baseUrl } from "../../constants";
 
 const CadastroContainer = styled.div`
     height: 40%;
@@ -54,14 +56,38 @@ const Button = styled.button`
 
 
 class Cadastro extends React.Component{
+    
+    state={
+        inputNameValue: ""
+    }
+
+    changeInputNameValue = (event) =>{
+        this.setState({inputNameValue: event.target.value});
+    }
+
+    createPlaylist = () => {
+        const body = {
+            name: this.state.inputNameValue 
+        }
+
+        axios.post(baseUrl, body, axiosConfig)
+            .then(response => {console.log(response)})
+            .catch(error => {console.log(error)})
+    }
     render(){
+        
         return(
             <CadastroContainer>
                 <Titulo>Crie uma nova playlist</Titulo>
                 <InputContainer>
                     <Label htmlFor="name">Nome da nova playlist</Label>
-                    <Input name="name"/>
-                    <Button>Cadastrar</Button>
+                    <Input 
+                        name="name"
+                        type="text"
+                        value={this.state.inputNameValue}
+                        onChange={this.changeInputNameValue}    
+                    />
+                    <Button onClick={this.createPlaylist}>Cadastrar</Button>
                 </InputContainer>
             </CadastroContainer>
     
