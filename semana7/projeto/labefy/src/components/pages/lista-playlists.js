@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Playlist from "./detalhe-playlist";
 
 const PageContainer = styled.div`
     height: 60%;
@@ -35,9 +36,11 @@ const Item = styled.div`
     
 `
 
-const Playlists = styled.a`
-    text-decoration: none;
-    
+const Playlists = styled.button`
+    border: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: white;
     :hover{
         cursor: pointer;
         font-weight: bold;
@@ -74,28 +77,45 @@ class Lista extends React.Component{
             "Relaxar",
             "Lofi",
             "Noite da pizza"    
-        ]
+        ],
+        pagina: "lista"
     }
     
-    
+    atualizaPagina = (pagina) => {
+        this.setState({pagina: pagina});
+    }
     render(){
-        return(
-        
-            <PageContainer>
-                <Titulo>Minhas playlists</Titulo>
+
+        const mostraPagina = () =>{
+            if (this.state.pagina === "lista"){
+                return (
                     <ListaContainer>
-                        {this.state.lista.map((playlist) => {
-                            return (
+                            {this.state.lista.map((playlist) => {
+                                return (
                                     <Item>
-                                        <Playlists>{playlist}</Playlists>
+                                        <Playlists onClick={() => this.atualizaPagina("detalhe")}>{playlist}</Playlists>
                                         <Button>
                                             <Icone src="https://icons-for-free.com/iconfiles/png/512/delete+remove+trash+trash+bin+trash+can+icon-1320073117929397588.png" />
                                         </Button>
                                     </Item>
                                 );
-                        }) 
+                            }) 
                         }
-                    </ListaContainer>    
+                    </ListaContainer>
+                );
+            }else if(this.state.pagina==="detalhe"){
+                return <Playlist 
+                            atualizaPagina={this.atualizaPagina}
+                        />
+            }
+        }
+
+
+        return(
+        
+            <PageContainer>
+                <Titulo>Minhas playlists</Titulo>
+                    {mostraPagina()}
             </PageContainer>
     
         );

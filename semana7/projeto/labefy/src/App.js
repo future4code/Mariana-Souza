@@ -6,6 +6,7 @@ import Footer from './components/footer/footer';
 import Header from './components/header/header';
 import Barra from './components/barra-lateral/barra-lateral';
 import Main from './components/pages/home';
+import Playlist from './components/pages/detalhe-playlist';
 
 
 const PageContainer = styled.div`
@@ -30,6 +31,7 @@ class App extends React.Component{
         />
         <Main 
           paginaAtual={this.state.paginaAtual}
+          mostraPagina={this.mostraPagina}
         />
         <Footer/>
       </PageContainer>

@@ -2,8 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import Cadastro from "./cadastrar-playlist";
 import Lista from "./lista-playlists";
+import Playlist from "./detalhe-playlist"
 
-const MainContainer = styled.footer`
+const MainContainer = styled.div`
     background-color: #4d7973;
     height: 85vh;
     width: 75vw;
