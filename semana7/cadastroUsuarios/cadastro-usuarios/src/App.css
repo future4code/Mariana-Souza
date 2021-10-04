@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Montserrat+Alternates:wght@300;400;500&display=swap');
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+/*------HOME------*/
+
+
+/*------HOME------*/
+
+
+
+/*------CADASTRO------*/
+
+
+
+
+
+
+
+
+
+
+.voltar{/*botao voltar*/
+  font-family: 'Baloo Da 2';
+  padding: 0.1rem 0.4rem;
+  margin-top: 1rem;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  background: #06beb6;
+  background: -webkit-linear-gradient(to right, #27828e, #06beb6);
+  background: linear-gradient(to right, #11434a, #27828e);
+}
+.voltar:hover{/*botao voltar*/
+  cursor: pointer;
+  background: #072b30;
+  background: -webkit-linear-gradient(to right, #072b30, #27828e);
+  background: linear-gradient(to right, #072b30, #27828e);
+
+}
+
+/*------CADASTRO------*/
+
+
+/*------LISTA------*/
+.listaContainer p{
+  font-family: 'Baloo Da 2';
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+
+/*------LISTA------*/
+/*------CADASTRO------*/
+/*------CADASTRO------*/
