@@ -13,7 +13,7 @@ export const BotaoIcones = styled.button`
     }
 `
 
-export const UserContainer = styled.div`
+export const Card = styled.div`
     width: 100%;
     height: 80%;
     border: 1px solid black;
@@ -23,4 +23,7 @@ export const UserContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding: 0 0.5rem;
+`
+export const Image = styled.img`
+    width: 80%;
 `
