@@ -1,34 +1,43 @@
 import './App.css'
-import React, { useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { ContentContainer, PageContainer } from './AppEstilo'
 import TelaInicial from './components/TelaInicial/TelaInicial'
 import TelaMatches from './components/TelaMatches/TelaMatches'
-import prettyFormat from 'pretty-format'
+import Reset from './components/BotaoReset/BotaoReset'
+
 
 
 function App() {
   const [tela, setTela] = useState("home")
-  const [matches, setMatches] = useState([])
-  const [profile, setProfile] = useState({})
-  // const [getProfileToChose, setGetProfileChose] = useState(false)
-
-
+  const [profile, setProfile] = useState(undefined)
   
+
+//requisição de perfil para escolher
   const getProfileToChoose = () => {
-    axios.get('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno/person')
+    axios.get('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/mariana/person')
       .then((response) => {
         setProfile(response.data.profile)
       })
-      .catch((error) => {
-        console.log(error)
+      .catch(() => {
+        alert("Algo deu errado. Tente novamente")
       })
   }
 
-useEffect(() => {
-  getProfileToChoose()
-}, [])
+  useEffect(() => {
+    getProfileToChoose()
+  }, [])
 
+  
+
+
+  
+
+
+
+
+
+//renderização condicional
   const atualizaTela = (tela) => {
     setTela(tela)
   }
@@ -39,48 +48,27 @@ useEffect(() => {
       case "home":
         return <TelaInicial
           atualizaTela={atualizaTela}
-          choosePerson={postChoosePerson}
           user={profile}
           getProfileToChoose={getProfileToChoose}
         />
       case "match":
-        return <TelaMatches atualizaTela={atualizaTela} />
+        return <TelaMatches
+          atualizaTela={atualizaTela}
+        />
 
     }
   }
 
 
-  const postChoosePerson = (id) => {
-    axios.post('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno/choose-person',
-      {
-        "id": id,
-        "choice": true
-      }
-    )
-      .then((resp) => {
-        console.log(resp.data)
-        verificaMatch(resp.data.isMatch, profile)
-      })
-      .catch((err) => {
-        console.log("Erro:", err)
-      })
-  }
-
-
-  const verificaMatch = (isMatch, profile) => {
-    if(isMatch === true){
-      const newMatch = profile
-      setMatches(...matches, newMatch)
-    }
-  }
-
-
-  console.log("Meus matches:", matches)
   return (
-    <PageContainer>
+    <>
+      <PageContainer>
       {renderizaTela()}
+      
 
-    </PageContainer>
+      </PageContainer>
+      <Reset />
+    </>
   )
 
 

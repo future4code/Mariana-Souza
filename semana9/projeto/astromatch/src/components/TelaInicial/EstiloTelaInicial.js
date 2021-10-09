@@ -25,5 +25,9 @@ export const Card = styled.div`
     padding: 0 0.5rem;
 `
 export const Image = styled.img`
-    width: 80%;
+    width: 50%;
+`
+
+export const Title = styled.div`
+    display: flex;
 `

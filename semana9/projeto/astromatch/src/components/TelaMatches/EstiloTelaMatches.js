@@ -25,6 +25,9 @@ export const MatchContainer = styled.div`
     li{
         list-style: none;
     }
+    :hover{
+        background-color: rgba(0,0,0,0.2);
+    }
 `
 
 export const UserImage=styled.img`
