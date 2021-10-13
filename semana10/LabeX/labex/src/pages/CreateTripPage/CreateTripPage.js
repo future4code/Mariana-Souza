@@ -1,4 +1,5 @@
 import { useHistory } from "react-router";
+import { Botao } from "../../Style";
 
 function CreateTripPage() {
     const history = useHistory();
@@ -10,7 +11,7 @@ function CreateTripPage() {
     return (
         <div>
             <p>Cadastre uma viagem</p>
-            <button onClick={goBack}>Voltar</button>
+            <Botao onClick={goBack}>Voltar</Botao>
         </div>
     );
 }

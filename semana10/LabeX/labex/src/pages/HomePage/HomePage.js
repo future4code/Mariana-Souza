@@ -1,5 +1,6 @@
 import react from "react";
 import {useHistory} from 'react-router-dom';
+import { Botao } from "../../Style";
 function HomePage() {
     const history = useHistory()
 
@@ -19,9 +20,9 @@ function HomePage() {
     return (
       <div>
         <p>Home</p>
-        <button onClick={goToLogin}>Área administrativa</button>
-        <button onClick={goToListTrip}>Viagens</button>
-        <button onClick={goBack}>Voltar</button>
+        <Botao onClick={goToLogin}>Área administrativa</Botao>
+        <Botao onClick={goToListTrip}>Viagens</Botao>
+        <Botao onClick={goBack}>Voltar</Botao>
       </div>
     );
   }

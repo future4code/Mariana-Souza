@@ -1,4 +1,5 @@
 import { useHistory } from "react-router";
+import {Botao} from '../../Style'
 
 function AdminHomePage() {
 
@@ -21,9 +22,9 @@ function AdminHomePage() {
       <div>
         <p>Home Adm</p>
 
-        <button onClick={goBack}>Voltar</button>
-        <button onClick={goToCreateTrip}>Criar viagem</button>
-        <button onClick={goToHome}>Logout</button>
+        <Botao onClick={goBack}>Voltar</Botao>
+        <Botao onClick={goToCreateTrip}>Criar viagem</Botao>
+        <Botao onClick={goToHome}>Logout</Botao>
       </div>
     );
   }
