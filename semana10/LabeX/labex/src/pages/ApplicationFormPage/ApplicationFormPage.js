@@ -1,4 +1,5 @@
 import { useHistory } from "react-router";
+import { Button } from "../../Style";
 
 
 function AppFormPage() {
@@ -12,7 +13,7 @@ function AppFormPage() {
     return (
       <div>
         <p>Inscreva-se</p>
-        <button onClick={goBack}>Voltar</button>
+        <Button onClick={goBack}>Voltar</Button>
       </div>
     );
   }

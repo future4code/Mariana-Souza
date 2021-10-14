@@ -1,4 +1,5 @@
 import { useHistory } from "react-router";
+import { Button } from "../../Style";
 
 
 
@@ -12,7 +13,7 @@ function TripDetailsPage() {
     return (
         <div>
             <p>Detalhes viagem aqui</p>
-            <button onClick={goBack}>Voltar</button>
+            <Button onClick={goBack}>Voltar</Button>
         </div>
     );
 }
