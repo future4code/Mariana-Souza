@@ -43,6 +43,13 @@ export const Button = styled.button`
     }
 `
 
+export const ButtonContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+`
+
+
 export const Input = styled.input`
     outline: none;
     font-size: 1.2rem;

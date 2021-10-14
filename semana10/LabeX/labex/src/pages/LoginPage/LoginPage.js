@@ -1,7 +1,7 @@
 import react from "react";
 import { useHistory } from 'react-router-dom';
-import { Button, Input } from "../../Style";
-import { ButtonContainer, InputsContainer, LoginContainer } from "./LoginPageStyle";
+import { Button, Input, ButtonContainer, InputsContainer  } from "../../Style";
+import { LoginContainer } from "./LoginPageStyle";
 
 function Login() {
 
@@ -19,11 +19,11 @@ function Login() {
       <p>Faça login para acessar a área restrita do site</p>
       <InputsContainer>
       <label>E-mail</label>
-      <Input />
+      <Input type="email" required/>
       </InputsContainer>
       <InputsContainer>
       <label>Senha</label>
-      <Input />
+      <Input type="password" required/>
       </InputsContainer>
       <ButtonContainer>
         <Button onClick={goToAdminHome}>Fazer login</Button>
