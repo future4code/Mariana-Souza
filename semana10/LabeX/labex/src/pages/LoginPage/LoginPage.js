@@ -1,7 +1,7 @@
 import react from "react";
 import { useHistory } from 'react-router-dom';
-import { Button } from "../../Style";
-import { ButtonContainer, Input, InputsContainer, LoginContainer } from "./LoginPageStyle";
+import { Button, Input } from "../../Style";
+import { ButtonContainer, InputsContainer, LoginContainer } from "./LoginPageStyle";
 
 function Login() {
 

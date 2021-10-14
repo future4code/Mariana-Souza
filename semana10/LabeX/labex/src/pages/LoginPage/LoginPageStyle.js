@@ -30,7 +30,3 @@ export const ButtonContainer = styled.div`
 `
 
 
-export const Input = styled.input`
-    outline: none;
-    font-size: 1.2rem;
-`

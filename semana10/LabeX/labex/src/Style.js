@@ -8,7 +8,25 @@ export const MainContainer = styled.main`
     display: flex;
     justify-content: center;
     align-items: center;
+    p{
+        text-align: center;
+    }
 `
+
+// export const ContentContainer = styled.div`
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     /* align-items: center; */
+//     border: 1px solid black;
+//     height: 70%;
+//     padding: 2rem;
+
+//     p{
+//         margin-bottom: 2rem;
+//         font-size: 1.2rem;
+//     }
+// `
 
 
 export const Button = styled.button`
@@ -16,7 +34,7 @@ export const Button = styled.button`
     border-radius: 5px;
     background-color: #c5d2ec;
     margin: 1rem;
-    padding: 1rem 2rem;
+    padding: 0.8rem 2rem;
     font-size: 1.2rem;
     width: fit-content;
     :hover{
@@ -25,15 +43,23 @@ export const Button = styled.button`
     }
 `
 
-export const Botao = styled.button`
-    border: none;
-    border-radius: 5px;
-    background-color: #c5d2ec;
-    margin: 1rem;
-    padding: 1rem 2rem;
+export const Input = styled.input`
+    outline: none;
     font-size: 1.2rem;
-    :hover{
-        cursor: pointer;
-        
-    }
 `
+
+
+export const InputsContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem;
+`
+
+export const Select = styled.select`
+    outline: none;
+    font-size: 1.2rem;
+`
+// export const Option = styled.Option`
+// font-size: 1.2rem;
+// `
