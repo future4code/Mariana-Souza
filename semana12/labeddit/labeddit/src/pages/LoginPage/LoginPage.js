@@ -8,6 +8,10 @@ function Login() {
   return (
     <div>
       <h3>Login</h3>
+      <label>E-mail</label>
+      <input />
+      <label>Senha</label>
+      <input />
       <button onClick={()=>goToHome(history)}>Fazer login</button>
     </div>
   );

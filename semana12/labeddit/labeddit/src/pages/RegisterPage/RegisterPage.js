@@ -9,6 +9,12 @@ function Register() {
   return (
     <div>
       <h3>Register</h3>
+      <label>Nome de usuário</label>
+      <input />
+      <label>E-mail</label>
+      <input />
+      <label>Senha</label>
+      <input />
       <button onClick={()=>goToHome(history)}>Fazer cadastro</button>
     </div>
   );
