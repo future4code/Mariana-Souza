@@ -1,14 +1,15 @@
 import { React, useState, useEffect } from "react";
 import GlobalStateContext from "./GlobalStateContext";
-import axios from 'axios';
-// import { BASE_URL } from "../constants/url";
+
 
 
 const GlobalState = (props) => {
 
+   
+
     const states = { }
     const setters = { }
-    const requests = { }
+    const requests = {}
 
     return (
         <GlobalStateContext.Provider value={{ states, setters, requests }}>

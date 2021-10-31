@@ -1,23 +1,54 @@
-import React from 'react';
-import { useHistory } from 'react-router';
-import { goToHome, goToRegister } from '../../routes/coordinator';
-import { PageContainer } from '../../Style';
+import React from "react";
+import { SignUpContainer } from "./LoginPageStyle";
+import { PageContainer } from "../../Style";
+import { useForm } from "../../hooks/useForm";
+import { Typography } from "@material-ui/core";
+import { Button } from "@material-ui/core";
+import LoginForm from "./LoginForm";
+import { goToRegister } from "../../routes/coordinator";
+import { useHistory } from "react-router";
+import useUnprotectedPage from "../../hooks/useUnprotectedPage";
 
 
-function Login() {
-  const history = useHistory();
-  return (
-    <PageContainer>
-      <h3>Boas vindas ao Labeddit!</h3>
-      <h4>Faça login para prosseguir</h4>
-      <label>E-mail</label>
-      <input />
-      <label>Senha</label>
-      <input />
-      <button onClick={()=>goToHome(history)}>Fazer login</button>
-      <button onClick={()=>goToRegister(history)}>Fazer cadastro</button>
-    </PageContainer>
-  );
+export default function LoginPage({setRightButton}) {
+    useUnprotectedPage()
+    
+    
+
+    const history = useHistory();
+    return (
+        <PageContainer>
+            <Typography
+                variant="h6"
+                component="div"
+                sx={{ flexGrow: 1 }}
+                color={'primary'}
+            >
+                Faça login para acessar o site
+            </Typography>
+            <LoginForm 
+                setRightButton={setRightButton}
+            />
+            <SignUpContainer>
+                <Typography
+                    variant="p"
+                    component="div"
+                    sx={{ flexGrow: 1 }}
+                    color={'primary'}
+
+                >
+                    Não possui uma conta? Acesse o formulário e cadastre-se!
+                </Typography>
+                <Button
+                    fullWidth
+                    color="primary"
+                    variant={"outlined"}
+                    size={"medium"}
+                    onClick={() => goToRegister(history)}
+                >
+                    Fazer cadastro
+                </Button>
+            </SignUpContainer>
+        </PageContainer>
+    )
 }
-
-export default Login;

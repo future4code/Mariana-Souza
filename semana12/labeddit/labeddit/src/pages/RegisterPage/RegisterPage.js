@@ -1,23 +1,26 @@
-import React from 'react';
-import { useHistory } from 'react-router';
-import { goToHome } from '../../routes/coordinator';
+import React from "react";
+import { PageContainer } from "../../Style";
+import RegisterForm from "./RegisterPageForm";
+import { Typography } from "@material-ui/core";
+import { useHistory } from "react-router-dom";
+import useUnprotectedPage from "../../hooks/useUnprotectedPage";
 
-
-function Register() {
-
+export default function Register({setRightButton}) {
+    useUnprotectedPage()
     const history = useHistory();
-  return (
-    <div>
-      <h3>Register</h3>
-      <label>Nome de usuário</label>
-      <input />
-      <label>E-mail</label>
-      <input />
-      <label>Senha</label>
-      <input />
-      <button onClick={()=>goToHome(history)}>Fazer cadastro</button>
-    </div>
-  );
+    return(
+        <PageContainer>
+            <Typography
+                variant="h6"
+                component="div"
+                sx={{ flexGrow: 1 }}
+                color={'primary'}
+            >
+                Cadatre-se para ter acesso ao site
+            </Typography>
+            <RegisterForm 
+                setRightButton={setRightButton}
+            />
+        </PageContainer>
+    )
 }
-
-export default Register;

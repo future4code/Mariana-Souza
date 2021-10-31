@@ -1,25 +1,31 @@
 import React from 'react';
-import { Switch, Route, BrowserRouter } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Home from '../pages/HomePage/HomePage';
 import Login from '../pages/LoginPage/LoginPage';
 import Post from '../pages/PostPage/PostPage';
 import Register from '../pages/RegisterPage/RegisterPage';
 
 
-function Router() {
+
+function Router({setRightButton}) {
     return (
-        <BrowserRouter>
+        
+            
             <Switch>
                 <Route exact path={"/"}>
                     <Home />
                 </Route>
 
                 <Route exact path={"/login"}>
-                    <Login />
+                    <Login 
+                        setRightButton={setRightButton}
+                    />
                 </Route>
 
                 <Route exact path={"/register"}>
-                    <Register />
+                    <Register 
+                        setRightButton={setRightButton}
+                    />
                 </Route>
 
                 <Route exact path={"/post/:id"}>
@@ -31,7 +37,7 @@ function Router() {
                 </Route>
 
             </Switch>
-        </BrowserRouter>
+        
     )
 }
 export default Router;
