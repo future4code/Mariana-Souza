@@ -39,6 +39,20 @@ d)SELECT SUM(salary) FROM Actor;
 ### Exercício 5
 
 a)SELECT COUNT(*), gender FROM Actor GROUP BY gender;
+Essa query retorna a quantidade de entradas da tabela, agrupados pelo genero
 
-b)
+b)SELECT id, name FROM Actor ORDER BY name DESC;
 
+c)SELECT * FROM Actor ORDER BY salary;
+
+d)SELECT * FROM Actor ORDER BY salary DESC LIMIT 3;
+
+e)SELECT AVG(salary), gender FROM Actor GROUP BY gender;
+
+### Exercício 6
+
+a)ALTER TABLE Filmes ADD data_limite_de_exibicao VARCHAR(255);
+
+b)ALTER TABLE Filmes CHANGE avaliacao avaliacao FLOAT;
+
+c)
