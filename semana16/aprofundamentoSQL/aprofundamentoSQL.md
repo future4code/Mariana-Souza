@@ -55,4 +55,8 @@ a)ALTER TABLE Filmes ADD data_limite_de_exibicao VARCHAR(255);
 
 b)ALTER TABLE Filmes CHANGE avaliacao avaliacao FLOAT;
 
-c)
+c)UPDATE Filmes SET data_limite_de_exibicao = "2022-01-04" WHERE id = "003";
+
+UPDATE Filmes SET data_limite_de_exibicao = "2020-08-09" WHERE id = "001";
+
+d)
