@@ -4,7 +4,7 @@ import { Product } from "../types";
 
 const createProducts = async (req: Request, res: Response) => {
     try {
-        const { name, price, image_url } = req.body
+        const { name, price, quantity, image_url } = req.body
 
         if (!name || !price || !image_url) {
             throw new Error("Preencha todos os campos");
@@ -13,6 +13,7 @@ const createProducts = async (req: Request, res: Response) => {
             id: Date.now().toString(),
             name,
             price,
+            quantity,
             image_url
         }
         await connection("labecommerce_products").insert(product)

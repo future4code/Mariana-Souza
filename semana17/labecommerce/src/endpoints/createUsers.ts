@@ -8,7 +8,7 @@ const createUsers = async (req: Request, res: Response) => {
         const { name, email, password } = req.body;
 
         if (!name || !email || !password) {
-            throw new Error("Esta faltando parametros.")
+            throw new Error("Preencha todos os campos")
         }
 
         const user: User = {
