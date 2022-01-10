@@ -1,5 +1,6 @@
 import { UserDatabase } from "../data/UserDatabase";
 import { authenticationData, user, userCredentials } from "../model/User";
+import { Authenticator } from "../services/Authenticator";
 import { HashManager } from "../services/HashManager";
 
 export class UserBusiness{
@@ -10,9 +11,16 @@ export class UserBusiness{
     }
 
     login = async (email: string, password: string) => {
-        const user = await new UserDatabase().login(email)
-        return user
-        // const isUser = new HashManager().compareHash(userCredentials.password, )
-        // const token = 
+        const [user] = await new UserDatabase().login(email)
+        
+        const passwordIsCorrect: boolean = new HashManager().compareHash(password, user.password)
+
+        if(!user || !passwordIsCorrect){
+            return ("Preencha todos os campos corretamente")
+        }else{
+            const token = new Authenticator().generateToken({id:user.id})
+            return token
+        }
+
     }
 }

@@ -10,7 +10,7 @@ export class UserDatabase extends BaseDatabase{
     }
 
     login = async (email: string) => {
-        const user = await this.connection("labook_users").select("*").where(email)
+        const user = await this.connection("labook_users").where({email})
         return user
     }
 }

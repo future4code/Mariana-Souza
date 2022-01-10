@@ -40,11 +40,12 @@ export class UserController{
                 throw new Error("Preencha todos os campos")
             }
 
-            const user = await new UserBusiness().login(email, password)
+            const token = await new UserBusiness().login(email, password)
 
-            res.send(user)
+            res.status(200).send({token})
+
         }catch(error){
-            res.send("erro aqui")
+            res.status(500).send("erro desconhecido")
         }
     }
 }
