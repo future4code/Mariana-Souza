@@ -1,5 +1,6 @@
 import { app } from "./controller/app"
 import { PostController } from "./controller/PostController"
+import { UserController } from "./controller/UserController"
 
 app.get("/", (req, res)=>{
     res.send("Hello from express")
@@ -7,3 +8,6 @@ app.get("/", (req, res)=>{
 
 const postController = new PostController()
 app.get("/posts/:id", postController.getPostById )
+
+const userController = new UserController()
+app.post("/users/signup", userController.signup)
