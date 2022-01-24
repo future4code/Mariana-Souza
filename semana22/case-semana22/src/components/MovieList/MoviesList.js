@@ -1,41 +1,42 @@
-
+import { useEffect, useState } from "react"
+import { API_KEY, BASE_URL } from "../../constants/urls"
 import MovieCard from "./CardMovies"
 import { ContainerMoviesList } from "./styled"
 import axios from "axios"
-import { useEffect } from "react"
 
 const MoviesList = () => {
 
+    const url = `${BASE_URL}/movie/popular${API_KEY}`
 
-    const movies = async ()=>{
-        const url = `https://api.themoviedb.org/3/movie/popular?api_key=292c233f130d0ab2e4331fdc9ae64f6f`
 
-        await axios.get(url)
+    const [movies, setMovies] = useState([])
+
+
+    const getMovies = () => {
+        axios.get(url)
         .then((res)=>{
             console.log(res.data.results)
+            setMovies(res.data.results)
         })
         .catch((err)=>{
-            console.log(err.res.data)
+            alert("Deu ruim", err)
         })
-
     }
 
     useEffect(()=>{
-        movies()
+        getMovies()
     }, [])
 
 
-    // const renderMovieList = () => {
-       
-    // }
-
+    const movieCards = movies.map((movie)=>{
+        return <MovieCard
+            img={movie.poster_path}
+            title={movie.original_title}
+        />
+    })
 
     return <ContainerMoviesList>
-        {movies.map((movie)=>{
-            return <MovieCard
-                img={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
-            />
-        })}
+        {movieCards}
     </ContainerMoviesList>
 }
 

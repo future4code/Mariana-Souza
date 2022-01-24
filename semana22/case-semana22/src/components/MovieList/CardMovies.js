@@ -1,28 +1,27 @@
 import * as React from 'react';
 import {Card, CardContent, CardMedia, Typography, CardActionArea} from '@material-ui/core';
+import { ContainerMovie } from './styled';
+import { BASE_URL } from '../../constants/urls';
 
 
- const MovieCard = ({img, }) => {
+ const MovieCard = (props) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <ContainerMovie>
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
-          image={img}
-          alt="green iguana"
+          height="264"
+          width="176"
+          image={`https://image.tmdb.org/t/p/w200${props.img}`}
+          alt={props.title}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Lizard
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            {props.title}
           </Typography>
         </CardContent>
       </CardActionArea>
-    </Card>
+    </ContainerMovie>
   );
 }
 

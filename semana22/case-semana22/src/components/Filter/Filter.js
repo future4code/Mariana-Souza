@@ -1,5 +1,5 @@
+import {ContainerFilter} from "./styled"
 
-import { ContainerFilter } from "./styled";
 
 const Filter = () => {
 
@@ -7,8 +7,7 @@ const Filter = () => {
    
 
     return <ContainerFilter>
-        Filtro
-    </ContainerFilter>
+        filtro
+        </ContainerFilter>
 }
-
 export default Filter;
