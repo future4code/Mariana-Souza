@@ -19,7 +19,7 @@ const MoviesList = () => {
             setMovies(res.data.results)
         })
         .catch((err)=>{
-            alert("Deu ruim", err)
+            alert(err.message)
         })
     }
 
