@@ -22,4 +22,22 @@ export class ProductsBusiness {
 
         return result
     }
+
+
+    async getAllProducts(){
+        const allProducts = await new ProductsData().getAllProducts()
+
+        return allProducts
+    }
+
+
+    async getProductByName(name: string){
+        if(!name){
+            throw new MissingFieldsToComplet()
+        }
+
+        const product = await new ProductsData().getProductByName(name)
+
+        return product
+    }
 }
