@@ -8,7 +8,7 @@ const useRequestData = (initialData, url) => {
     const request = () => {
         axios.get(url)
         .then((res)=>{
-            console.log(res.data)
+            // console.log(res.data)
             setData(res.data)
         })
         .catch((err)=>{
