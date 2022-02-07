@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { render } from '@testing-library/react';
+import { BASE_URL } from './constants/url';
+import useRequestData from './hooks/useRequest';
 
 function App() {
+  const loterias = useRequestData([], `${BASE_URL}/loterias`)
+
+  
+
+  console.log("loterias", loterias[0])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      hello word
+      {loterias ? loterias[0].map((loteria)=>{
+      return <p>{loteria.nome}</p>
+      }) : <p>carregando</p>}
     </div>
   );
 }
